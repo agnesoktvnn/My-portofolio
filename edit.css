@@ -1,0 +1,374 @@
+/* Atur margin dan padding menjadi 0 untuk menghindari jarak di sekitar elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pastikan body dan html menyesuaikan seluruh layar */
+body, html {
+    height: 100%;
+}
+
+/* Terapkan gambar latar pada body */
+.first-background {
+    background-image: url('Latar\ belakang.png'); /* Gantilah dengan lokasi gambar Anda */
+    background-size: cover;           /* Menutupi seluruh area layar */
+    background-position: center;      /* Pusatkan gambar */
+    background-repeat: no-repeat;     /* Hindari pengulangan gambar */
+    min-height: 100vh;
+}
+
+.second-background {
+    background-image: url('kedua.png'); /* Gantilah dengan lokasi gambar Anda */
+    background-size: cover;           /* Menutupi seluruh area layar */
+    background-position: center;      /* Pusatkan gambar */
+    background-repeat: no-repeat;     /* Hindari pengulangan gambar */
+    height: 100vh; /* Mengambil tinggi penuh layar */
+    width: 100vw;
+}
+
+.ketiga-background {
+    background-image: url('ketiga.png'); /* Gantilah dengan lokasi gambar Anda */
+    background-size: cover;           /* Menutupi seluruh area layar */
+    background-position: center;      /* Pusatkan gambar */
+    background-repeat: no-repeat;     /* Hindari pengulangan gambar */
+    height: 100vh; /* Mengambil tinggi penuh layar */
+    width: 100vw;
+}
+
+.linkedin-container {
+    max-width: 800px;
+    margin left: 50px;
+    padding: 20px
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me {
+    width: 100%;
+    height: 50vh; /* setiap bagian tingginya 50% viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.awalan {
+    color: #8B4513;
+    font-weight: bold;
+    font-family: 'Konkhmer Sleokchher';
+    margin-bottom: 10px;
+    font-size: 48px;
+    text-align: center; /* Menengahkan judul */
+    width: 100%;
+}
+
+.isian {
+    max-width: 600px; /* membatasi lebar teks agar lebih mudah dibaca */
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 auto; /* Menengahkan paragraf */
+    padding: 0 20px;
+}
+
+.judul-brok {
+    color: #8B4513;
+    font-weight: bold;
+    font-family: 'Konkhmer Sleokchher';
+    margin-bottom: 10px;
+    font-size: 48px;
+    text-align: center; /* Menengahkan judul education */
+    width: 100%;
+}
+
+.edukesyen-container {
+    width: 100%;
+    height: 50vh; /* setiap bagian tingginya 50% viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto; /* Menambah margin auto untuk horizontal centering */
+    max-width: 800px;
+}
+
+.education-item {
+    margin: 10px auto; /* Menengahkan item pendidikan */
+    text-align: center; /* Menengahkan teks di dalam item */
+    width: 100%;
+}
+
+.greeting-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    padding: 0 20px;
+    height: 100vh;
+    left: 10%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.greeting-text h1 {
+    flex: 1;
+    padding-right: 50px;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-style: italic;
+}
+
+.greeting-text .name {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #8B4513; /* Warna coklat, bisa disesuaikan */
+    font-family: 'Konkhmer Sleokchher', sans-serif;
+}
+
+.greeting-text .subtitle {
+    font-size: 1.75rem;
+    font-weight: normal;
+    margin: 0;
+    color: #000;
+    font-style: italic;
+}
+
+/* Animasi optional */
+.greeting-text h1,
+.greeting-text .name,
+.greeting-text .subtitle {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.profil-image {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.greeting-text h1 { animation-delay: 0.2s; }
+.greeting-text .name { animation-delay: 0.4s; }
+.greeting-text .subtitle { animation-delay: 0.6s; }
+.profil-image { animation-delay: 0.6s;}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.profil-image {
+    flex: 1;
+    text-align: right;
+}
+
+.profil-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px; /* Sesuaikan dengan kebutuhan */
+    object-fit: cover;
+    /* Jika Anda ingin gambar berbentuk lingkaran atau rounded:
+    border-radius: 20px; */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .greeting-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .profil-image {
+        text-align: center;
+    }
+
+    .profil-image img {
+        max-width: 80%;
+    }
+
+    .greeting-text h1 {
+        font-size: 2rem;
+    }
+
+    .greeting-text .name {
+        font-size: 3rem;
+    }
+
+    .greeting-text .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Memastikan navbar selalu di atas konten lain */
+}
+
+/* Logo styles */
+.logo img {
+    height: 78px;
+    width: auto;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect untuk link */
+.nav-links a:hover {
+    color: #b87400;
+}
+
+/* Optional: Menambahkan garis bawah saat hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #b87400;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Toggle switch styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+    transform: translateX(200px);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
